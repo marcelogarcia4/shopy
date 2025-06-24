@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Product Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shopify Product Viewer</h1>
+
+        <form id="product-form">
+            <div>
+                <label for="store-input">Store Domain:</label>
+                <input type="text" id="store-input" name="store" placeholder="e.g., loom.fr" required>
+            </div>
+            <div>
+                <label for="handle-input">Product Handle:</label>
+                <input type="text" id="handle-input" name="handle" placeholder="e.g., le-t-shirt-coton-bio-homme" required>
+            </div>
+            <button type="submit" id="submit-button">Get Product Info</button>
+        </form>
+
+        <div id="message-area" class="message">
+            <!-- Error messages or loading messages will appear here -->
+        </div>
+
+        <div id="product-info" class="product-display" style="display: none;">
+            <h2 id="product-title"></h2>
+            <img id="product-image" src="" alt="Product Image" style="max-width: 300px; display: none;">
+            <p id="product-price"></p>
+            <a id="product-link" href="#" target="_blank">View Product in Store</a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
